@@ -160,8 +160,8 @@ function renderLesson(){
   const hasFb = !!(l.nhan_xet || "").trim();
   let body = "";
   if (tab === "bai") body = `<div class="md">${md(l.noi_dung)}</div>`;
-  if (tab === "on") body = `<div class="reveal" id="rv"><div class="reveal-cover">Tự trả lời phần 🔁 Ôn nhanh trước đã nhé.<br>
-      <button class="btn" id="show">Mình đã trả lời xong – xem đáp án</button></div></div>`;
+  if (tab === "tap") body = (l.bai_tap || "").trim() ? `<div class="md">${md(l.bai_tap)}</div>`
+      : `<div class="empty">Bài này chưa có bài tập.</div>`;
   if (tab === "nx") body = hasFb ? `<div class="md">${md(l.nhan_xet)}</div>`
       : `<div class="empty">Chưa có nhận xét.<br>Nộp bài xong, nhắn Claude <b>"chấm bài"</b> là nhận xét sẽ hiện ở đây.</div>`;
   app.innerHTML = `
@@ -174,14 +174,12 @@ function renderLesson(){
     </div>
     <div class="tabs">
       <button class="tab ${tab==="bai"?"on":""}" data-t="bai">Bài học</button>
-      <button class="tab ${tab==="on"?"on":""}" data-t="on">Đáp án ôn</button>
+      <button class="tab ${tab==="tap"?"on":""}" data-t="tap">Bài tập</button>
       <button class="tab ${tab==="nx"?"on":""}" data-t="nx">Nhận xét${hasFb?'<span class="dot"></span>':""}</button>
     </div>
     <div class="panel">${body}</div>`;
   document.getElementById("bk").onclick = () => { location.hash = ""; };
   app.querySelectorAll(".tab").forEach(b => b.onclick = () => { tab = b.dataset.t; renderLesson(); });
-  const s = document.getElementById("show");
-  if (s) s.onclick = () => { document.getElementById("rv").innerHTML = `<div class="md">${md(l.dap_an_on)}</div>`; };
 }
 
 window.addEventListener("hashchange", route);

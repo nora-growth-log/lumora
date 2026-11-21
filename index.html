@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Học Excel · Nora</title>
+<meta name="theme-color" content="#1F6F54">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<style>
+/* ====== CẤU HÌNH: ID của Google Sheet chứa bài học ====== */
+:root{
+  --bg:#F4F1EA; --card:#FFFFFF; --ink:#1D2321; --muted:#68716D; --line:#E3DED3;
+  --green:#1F6F54; --green-soft:#E3F0EA; --amber:#B7791F; --amber-soft:#FBF0DA;
+  --red:#B4443A; --red-soft:#F8E4E1; --code:#F1EEE6; --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141816; --card:#1D2220; --ink:#ECEFED; --muted:#9AA39F; --line:#2D3431;
+    --green:#5FBF96; --green-soft:#1E3129; --amber:#E2A84B; --amber-soft:#33291A;
+    --red:#E07A70; --red-soft:#3A2220; --code:#262C29;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px}
+.brand{font-weight:700;font-size:22px;letter-spacing:-.02em}
+.brand span{color:var(--green)}
+.sub{color:var(--muted);font-size:14px}
+.progress{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:18px}
+.progress .row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:8px}
+.progress .row b{color:var(--ink);font-size:16px}
+.bar{height:8px;background:var(--code);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .4s}
+.list{display:flex;flex-direction:column;gap:10px}
+.item{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit}
+.item:active{transform:scale(.99)}
+.num{flex:none;width:46px;height:46px;border-radius:12px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-weight:700;line-height:1.1;text-align:center;font-size:12px}
+.num b{font-size:18px;display:block}
+.item .t{flex:1;min-width:0}
+.item .t strong{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item .t small{color:var(--muted);font-size:13px}
+.badge{flex:none;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;white-space:nowrap}
+.b-todo{background:var(--amber-soft);color:var(--amber)}
+.b-sent{background:var(--code);color:var(--muted)}
+.b-done{background:var(--green-soft);color:var(--green)}
+.back{background:none;border:none;color:var(--green);font:inherit;font-weight:600;padding:6px 0;cursor:pointer;margin-bottom:6px}
+h1.lesson{font-size:24px;line-height:1.3;letter-spacing:-.02em;margin:4px 0 6px}
+.meta{color:var(--muted);font-size:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 12px;border-radius:12px;font-weight:600;text-decoration:none;font-size:15px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0F1513}}
+.tabs{display:flex;gap:6px;background:var(--code);padding:4px;border-radius:12px;margin-bottom:14px}
+.tab{flex:1;border:none;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--muted);padding:9px 6px;border-radius:9px;cursor:pointer}
+.tab.on{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.tab .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-left:5px;vertical-align:middle}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:6px 18px 18px}
+.md h3{font-size:17px;margin:22px 0 8px}
+.md h3:first-child{margin-top:14px}
+.md hr{border:none;border-top:1px dashed var(--line);margin:20px 0}
+.md code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.88em;background:var(--code);padding:2px 6px;border-radius:6px;word-break:break-word}
+.md ul,.md ol{padding-left:22px}
+.md li{margin:4px 0}
+.md em{color:var(--muted)}
+.md table{border-collapse:collapse;width:100%;font-size:14px;display:block;overflow-x:auto}
+.md th,.md td{border:1px solid var(--line);padding:6px 8px;text-align:left}
+.reveal{margin-top:6px}
+.reveal-cover{text-align:center;padding:28px 10px;color:var(--muted)}
+.reveal-cover button{margin-top:10px}
+.empty{color:var(--muted);text-align:center;padding:26px 8px}
+.state{padding:40px 0;text-align:center;color:var(--muted)}
+.err{background:var(--red-soft);color:var(--red);border-radius:var(--radius);padding:14px 16px;font-size:14px}
+.refresh{background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="state">Đang tải bài học…</div></div>
+
+<script>
+// ====== CẤU HÌNH ======
+const SHEET_ID = "1wb3ioKm-YmZH-VbvImDr56DM2sYPSzoxcNkL1-IHus0";
+const SHEET_TAB = "BaiHoc";
+const TOTAL_DAYS = 42;
+// ======================
+
+const app = document.getElementById("app");
+let lessons = [];
+let current = null;
+let tab = "bai";
+
+const md = s => DOMPurify.sanitize(marked.parse(s || "", { breaks: true }));
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+
+function badge(l){
+  if ((l.nhan_xet || "").trim()) return `<span class="badge b-done">Đã chấm</span>`;
+  const s = (l.trang_thai || "").toLowerCase();
+  if (s.includes("đã nộp")) return `<span class="badge b-sent">Đã nộp</span>`;
+  return `<span class="badge b-todo">Chưa nộp</span>`;
+}
+
+async function load(){
+  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&headers=1&sheet=${encodeURIComponent(SHEET_TAB)}&t=${Date.now()}`;
+  try{
+    const res = await fetch(url);
+    const text = await res.text();
+    if (!res.ok || text.trim().startsWith("<")) throw new Error("no-access");
+    const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
+    lessons = parsed.data
+      .map(r => ({ ...r, ngay: parseInt(r.ngay, 10), tuan: parseInt(r.tuan, 10) }))
+      .filter(r => !isNaN(r.ngay))
+      .sort((a, b) => b.ngay - a.ngay);
+    route();
+  }catch(e){
+    app.innerHTML = `<header><div><div class="brand">Học <span>Excel</span></div></div></header>
+      <div class="err">Không đọc được Google Sheet bài học. Kiểm tra Sheet đã bật chia sẻ
+      <b>"Bất kỳ ai có đường liên kết – Người xem"</b> chưa, rồi tải lại trang.</div>`;
+  }
+}
+
+function route(){
+  const d = parseInt(new URLSearchParams(location.hash.slice(1)).get("ngay"), 10);
+  current = lessons.find(l => l.ngay === d) || null;
+  current ? renderLesson() : renderHome();
+  window.scrollTo(0, 0);
+}
+
+function renderHome(){
+  const latest = lessons[0];
+  const day = latest ? latest.ngay : 0;
+  const week = latest ? latest.tuan : 1;
+  const pct = Math.min(100, Math.round(day / TOTAL_DAYS * 100));
+  app.innerHTML = `
+    <header>
+      <div><div class="brand">Học <span>Excel</span></div><div class="sub">Chào Nora · mỗi ngày một bài</div></div>
+      <button class="refresh" id="rf">↻ Làm mới</button>
+    </header>
+    <div class="progress">
+      <div class="row"><b>Ngày ${day}/${TOTAL_DAYS}</b><span>Tuần ${week}/6</span></div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+    </div>
+    <div class="list">
+      ${lessons.length ? lessons.map(l => `
+        <button class="item" data-d="${l.ngay}">
+          <div class="num">Ngày<b>${l.ngay}</b></div>
+          <div class="t"><strong>${esc(l.chu_de)}</strong><small>Tuần ${l.tuan} · ${esc(l.ngay_dang)}</small></div>
+          ${badge(l)}
+        </button>`).join("") : `<div class="empty">Chưa có bài nào.</div>`}
+    </div>`;
+  document.getElementById("rf").onclick = load;
+  app.querySelectorAll(".item").forEach(b => b.onclick = () => { tab = "bai"; location.hash = "ngay=" + b.dataset.d; });
+}
+
+function renderLesson(){
+  const l = current;
+  const hasFb = !!(l.nhan_xet || "").trim();
+  let body = "";
+  if (tab === "bai") body = `<div class="md">${md(l.noi_dung)}</div>`;
+  if (tab === "on") body = `<div class="reveal" id="rv"><div class="reveal-cover">Tự trả lời phần 🔁 Ôn nhanh trước đã nhé.<br>
+      <button class="btn" id="show">Mình đã trả lời xong – xem đáp án</button></div></div>`;
+  if (tab === "nx") body = hasFb ? `<div class="md">${md(l.nhan_xet)}</div>`
+      : `<div class="empty">Chưa có nhận xét.<br>Nộp bài xong, nhắn Claude <b>"chấm bài"</b> là nhận xét sẽ hiện ở đây.</div>`;
+  app.innerHTML = `
+    <button class="back" id="bk">← Tất cả bài</button>
+    <h1 class="lesson">Ngày ${l.ngay} – Tuần ${l.tuan}: ${esc(l.chu_de)}</h1>
+    <div class="meta"><span>Đăng ${esc(l.ngay_dang)}</span>${badge(l)}</div>
+    <div class="actions">
+      <a class="btn primary" href="${esc(l.link_file)}" target="_blank" rel="noopener">⬇ Tải file bài tập</a>
+      <a class="btn" href="${esc(l.link_nop)}" target="_blank" rel="noopener">⬆ Nộp bài</a>
+    </div>
+    <div class="tabs">
+      <button class="tab ${tab==="bai"?"on":""}" data-t="bai">Bài học</button>
+      <button class="tab ${tab==="on"?"on":""}" data-t="on">Đáp án ôn</button>
+      <button class="tab ${tab==="nx"?"on":""}" data-t="nx">Nhận xét${hasFb?'<span class="dot"></span>':""}</button>
+    </div>
+    <div class="panel">${body}</div>`;
+  document.getElementById("bk").onclick = () => { location.hash = ""; };
+  app.querySelectorAll(".tab").forEach(b => b.onclick = () => { tab = b.dataset.t; renderLesson(); });
+  const s = document.getElementById("show");
+  if (s) s.onclick = () => { document.getElementById("rv").innerHTML = `<div class="md">${md(l.dap_an_on)}</div>`; };
+}
+
+window.addEventListener("hashchange", route);
+load();
+</script>
+</body>
+</html>

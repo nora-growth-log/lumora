@@ -1,0 +1,143 @@
+{
+ "date": "2026-11-24",
+ "title": "Nvidia soars as Huang returns, sparking a Wall Street relief rally",
+ "src": {
+  "name": "CBS News (via Yahoo Finance)",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/stock-futures-rise-erasing-losses-135609253.html"
+ },
+ "en": [
+  "Nvidia shares soared more than 30% on Monday after the chipmaker's board reinstated Jensen Huang as chief executive, less than two weeks after he stepped down amid a scandal.",
+  "The surge added roughly $1 trillion to Nvidia's market value and sparked a broad relief rally, with the Nasdaq jumping more than 6% and the S&P 500 gaining about 4.5% by midday.",
+  "The rebound came hot on the heels of a brutal sell-off that had dragged both the S&P 500 and the Dow into correction territory.",
+  "Analysts said Huang's return lifts a huge overhang from the stock, though a more hawkish Fed and stubbornly high inflation are likely to keep investors on edge."
+ ],
+ "vi": [
+  "Cổ phiếu Nvidia tăng vọt hơn 30% hôm thứ Hai sau khi hội đồng quản trị của hãng chip này phục chức tổng giám đốc cho Jensen Huang, chưa đầy hai tuần sau khi ông từ chức giữa lúc vướng bê bối.",
+  "Đà tăng mạnh này đã bổ sung khoảng 1.000 tỷ USD vào giá trị vốn hóa của Nvidia và châm ngòi cho một đợt hồi phục nhẹ nhõm trên diện rộng, với chỉ số Nasdaq tăng vọt hơn 6% và S&P 500 tăng khoảng 4,5% tính đến giữa phiên.",
+  "Sự phục hồi diễn ra ngay sau một đợt bán tháo dữ dội đã kéo cả S&P 500 lẫn Dow Jones rơi vào vùng điều chỉnh.",
+  "Các nhà phân tích cho rằng việc ông Huang trở lại đã gỡ bỏ một mối lo lớn đè nặng lên cổ phiếu, dù một Fed cứng rắn hơn và lạm phát dai dẳng ở mức cao nhiều khả năng vẫn sẽ khiến nhà đầu tư thấp thỏm."
+ ],
+ "k": [
+  [
+   "soared",
+   "reinstated",
+   "stepped down",
+   "amid"
+  ],
+  [
+   "added roughly $1 trillion to",
+   "market value",
+   "relief rally"
+  ],
+  [
+   "hot on the heels of",
+   "sell-off",
+   "dragged",
+   "correction territory"
+  ],
+  [
+   "lifts a huge overhang",
+   "hawkish",
+   "stubbornly high inflation",
+   "keep investors on edge"
+  ]
+ ],
+ "vocab": [
+  {
+   "t": "soar",
+   "k": "Từ",
+   "vi": "tăng vọt",
+   "note": "Mạnh hơn rise/climb; dùng cho giá cổ phiếu, lợi nhuận, lạm phát. Đồng nghĩa: surge, jump, skyrocket.",
+   "ex": "Gold prices soared to a record as investors sought safety.",
+   "exVi": "Giá vàng tăng vọt lên mức kỷ lục khi nhà đầu tư tìm nơi trú ẩn an toàn."
+  },
+  {
+   "t": "reinstate",
+   "k": "Từ",
+   "vi": "phục chức, khôi phục",
+   "note": "Đưa ai trở lại vị trí cũ (reinstate sb as CEO) hoặc khôi phục một chính sách (reinstate tariffs).",
+   "ex": "The government plans to reinstate import duties on steel.",
+   "exVi": "Chính phủ dự định khôi phục thuế nhập khẩu đối với thép."
+  },
+  {
+   "t": "step down",
+   "k": "Cụm động từ",
+   "vi": "từ chức, rời ghế",
+   "note": "Cách nói trung tính, lịch sự hơn resign; thường đi với as + chức vụ.",
+   "ex": "The bank's chairman will step down at the end of the year.",
+   "exVi": "Chủ tịch ngân hàng sẽ rời ghế vào cuối năm."
+  },
+  {
+   "t": "amid",
+   "k": "Từ",
+   "vi": "giữa lúc, trong bối cảnh",
+   "note": "Giới từ rất hay gặp ở tít và câu báo chí: amid concerns / amid a slowdown / amid a scandal.",
+   "ex": "The rupiah weakened amid fears of capital outflows.",
+   "exVi": "Đồng rupiah suy yếu giữa lúc lo ngại dòng vốn rút ra."
+  },
+  {
+   "t": "market value",
+   "k": "Cụm từ",
+   "vi": "giá trị vốn hóa thị trường",
+   "note": "Tổng giá trị cổ phiếu đang lưu hành; còn gọi là market capitalisation (market cap). Hay đi với add/wipe … off/from.",
+   "ex": "The sell-off wiped $200 billion off the company's market value.",
+   "exVi": "Đợt bán tháo đã thổi bay 200 tỷ USD giá trị vốn hóa của công ty."
+  },
+  {
+   "t": "relief rally",
+   "k": "Cụm từ",
+   "vi": "đợt tăng giá vì nhẹ nhõm",
+   "note": "Thị trường bật tăng khi một mối lo được gỡ bỏ, thường sau chuỗi giảm sâu.",
+   "ex": "Asian stocks staged a relief rally after the trade talks resumed.",
+   "exVi": "Chứng khoán châu Á bật tăng nhẹ nhõm sau khi đàm phán thương mại được nối lại."
+  },
+  {
+   "t": "hot on the heels of",
+   "k": "Thành ngữ",
+   "vi": "ngay sau, nối gót",
+   "note": "Nhấn mạnh hai sự kiện xảy ra sát nhau; theo sau là danh từ.",
+   "ex": "The rate cut came hot on the heels of weak jobs data.",
+   "exVi": "Đợt giảm lãi suất diễn ra ngay sau số liệu việc làm yếu."
+  },
+  {
+   "t": "sell-off",
+   "k": "Từ",
+   "vi": "đợt bán tháo",
+   "note": "Danh từ (có gạch nối); động từ là sell off. Hay đi với brutal, sharp, broad.",
+   "ex": "A broad sell-off in bank shares dragged the index lower.",
+   "exVi": "Đợt bán tháo diện rộng ở cổ phiếu ngân hàng đã kéo chỉ số đi xuống."
+  },
+  {
+   "t": "drag … into",
+   "k": "Cụm động từ",
+   "vi": "kéo … rơi vào",
+   "note": "Chủ ngữ thường là yếu tố tiêu cực: drag the economy into recession, drag stocks into a bear market.",
+   "ex": "Falling exports could drag the economy into recession.",
+   "exVi": "Xuất khẩu sụt giảm có thể kéo nền kinh tế rơi vào suy thoái."
+  },
+  {
+   "t": "correction territory",
+   "k": "Cụm từ",
+   "vi": "vùng điều chỉnh",
+   "note": "Khi chỉ số giảm từ 10% trở lên so với đỉnh gần nhất. Giảm từ 20% trở lên là bear market territory.",
+   "ex": "Oil prices slipped into correction territory this week.",
+   "exVi": "Giá dầu đã trượt vào vùng điều chỉnh trong tuần này."
+  },
+  {
+   "t": "lift an overhang",
+   "k": "Thành ngữ",
+   "vi": "gỡ bỏ mối lo đè nặng",
+   "note": "Overhang = yếu tố bất định đè lên giá cổ phiếu. Lift/remove an overhang = gỡ bỏ nó.",
+   "ex": "The settlement lifted a legal overhang from the bank's shares.",
+   "exVi": "Thỏa thuận dàn xếp đã gỡ bỏ mối lo pháp lý đè nặng lên cổ phiếu ngân hàng."
+  },
+  {
+   "t": "keep … on edge",
+   "k": "Thành ngữ",
+   "vi": "khiến … thấp thỏm, căng thẳng",
+   "note": "On edge = bồn chồn, lo lắng. Dùng với investors, markets, traders.",
+   "ex": "Uncertainty over tariffs kept markets on edge all week.",
+   "exVi": "Sự bất định về thuế quan khiến thị trường thấp thỏm suốt cả tuần."
+  }
+ ]
+}

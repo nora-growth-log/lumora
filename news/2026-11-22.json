@@ -1,0 +1,121 @@
+{
+ "date": "2026-11-22",
+ "title": "Bank of England lifts rates for the first time in three years",
+ "src": {
+  "name": "RTTNews",
+  "url": "https://www.rttnews.com/list/economic-news.aspx?Id=1004890&Node=B2"
+ },
+ "en": [
+  "The Bank of England has raised its key interest rate to 4%, marking its first hike in more than three years.",
+  "The decision underscores a broader shift among central banks back toward reining in inflation, with Norway's central bank signalling a rate increase on the same day.",
+  "Higher borrowing costs are likely to weigh on mortgage holders and businesses that rely heavily on credit.",
+  "Investors will now scour upcoming inflation data for clues as to whether further tightening lies ahead."
+ ],
+ "vi": [
+  "Ngân hàng Trung ương Anh đã nâng lãi suất chủ chốt lên 4%, đánh dấu lần tăng lãi suất đầu tiên sau hơn ba năm.",
+  "Quyết định này cho thấy rõ xu hướng chung của các ngân hàng trung ương là quay lại kiềm chế lạm phát, khi ngân hàng trung ương Na Uy cũng phát tín hiệu tăng lãi suất ngay trong cùng ngày.",
+  "Chi phí vay cao hơn nhiều khả năng sẽ đè nặng lên những người đang vay thế chấp và các doanh nghiệp phụ thuộc nhiều vào tín dụng.",
+  "Giờ đây, các nhà đầu tư sẽ soi kỹ các số liệu lạm phát sắp công bố để tìm manh mối xem liệu có thêm đợt thắt chặt nào phía trước hay không."
+ ],
+ "k": [
+  [
+   "key interest rate",
+   "marking"
+  ],
+  [
+   "underscores",
+   "reining in inflation"
+  ],
+  [
+   "borrowing costs",
+   "weigh on"
+  ],
+  [
+   "scour",
+   "tightening",
+   "lies ahead"
+  ]
+ ],
+ "vocab": [
+  {
+   "t": "key interest rate",
+   "k": "Cụm từ",
+   "vi": "lãi suất chủ chốt (lãi suất điều hành)",
+   "note": "Lãi suất chính mà ngân hàng trung ương dùng để điều hành chính sách tiền tệ. Còn gọi là benchmark rate hoặc policy rate.",
+   "ex": "The central bank left its key interest rate unchanged at 4.5%.",
+   "exVi": "Ngân hàng trung ương giữ nguyên lãi suất chủ chốt ở mức 4,5%."
+  },
+  {
+   "t": "mark",
+   "k": "Từ",
+   "vi": "đánh dấu (một cột mốc)",
+   "note": "Báo chí hay dùng dạng V-ing ở cuối câu: “…, marking its first…” để nói sự kiện đó là một cột mốc.",
+   "ex": "Exports rose 12% in October, marking the fifth straight month of growth.",
+   "exVi": "Xuất khẩu tăng 12% trong tháng 10, đánh dấu tháng tăng trưởng thứ năm liên tiếp."
+  },
+  {
+   "t": "rate hike",
+   "k": "Cụm từ",
+   "vi": "đợt tăng lãi suất",
+   "note": "Danh từ, ngược lại là rate cut (đợt giảm lãi suất). Báo chí dùng hike nhiều hơn increase vì ngắn gọn.",
+   "ex": "Markets have already priced in another rate hike.",
+   "exVi": "Thị trường đã phản ánh sẵn vào giá khả năng có thêm một đợt tăng lãi suất."
+  },
+  {
+   "t": "underscore",
+   "k": "Từ",
+   "vi": "nhấn mạnh, cho thấy rõ",
+   "note": "Động từ trang trọng, đồng nghĩa với highlight / emphasize. Chủ ngữ thường là một sự kiện hay số liệu.",
+   "ex": "The weak data underscore the need for more stimulus.",
+   "exVi": "Số liệu yếu cho thấy rõ sự cần thiết của các biện pháp kích thích."
+  },
+  {
+   "t": "rein in inflation",
+   "k": "Thành ngữ",
+   "vi": "kiềm chế lạm phát",
+   "note": "Rein là dây cương; rein in = ghìm lại. Dùng được với spending, costs, debt…",
+   "ex": "The government is trying to rein in public spending.",
+   "exVi": "Chính phủ đang cố ghìm chi tiêu công."
+  },
+  {
+   "t": "borrowing costs",
+   "k": "Cụm từ",
+   "vi": "chi phí vay",
+   "note": "Luôn ở số nhiều. Hay đi với rise / climb / ease.",
+   "ex": "Borrowing costs for small firms have eased since spring.",
+   "exVi": "Chi phí vay của doanh nghiệp nhỏ đã giảm bớt từ mùa xuân."
+  },
+  {
+   "t": "weigh on",
+   "k": "Cụm động từ",
+   "vi": "đè nặng lên, gây áp lực lên",
+   "note": "Rất phổ biến trong tin tài chính: “X weighs on stocks / growth / sentiment”.",
+   "ex": "Rising oil prices weighed on Asian stocks on Monday.",
+   "exVi": "Giá dầu tăng đã gây áp lực lên chứng khoán châu Á hôm thứ Hai."
+  },
+  {
+   "t": "scour … for clues",
+   "k": "Thành ngữ",
+   "vi": "soi kỹ … để tìm manh mối",
+   "note": "Scour = lục soát kỹ. Báo chí dùng khi nhà đầu tư theo dõi số liệu để đoán động thái tiếp theo.",
+   "ex": "Traders scoured the Fed minutes for clues about the next move.",
+   "exVi": "Giới giao dịch soi kỹ biên bản họp của Fed để tìm manh mối về bước đi tiếp theo."
+  },
+  {
+   "t": "tightening",
+   "k": "Từ",
+   "vi": "(chính sách) thắt chặt tiền tệ",
+   "note": "Monetary tightening = tăng lãi suất, hút tiền về. Ngược lại là easing (nới lỏng).",
+   "ex": "Further tightening could push the economy into recession.",
+   "exVi": "Thắt chặt thêm có thể đẩy nền kinh tế vào suy thoái."
+  },
+  {
+   "t": "lie ahead",
+   "k": "Cụm động từ",
+   "vi": "ở phía trước, sắp tới",
+   "note": "Thường dùng: “challenges lie ahead”, “whether … lies ahead”.",
+   "ex": "Analysts warn that tougher times lie ahead for exporters.",
+   "exVi": "Các nhà phân tích cảnh báo thời kỳ khó khăn hơn đang chờ các nhà xuất khẩu."
+  }
+ ]
+}

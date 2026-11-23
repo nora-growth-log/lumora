@@ -1,0 +1,130 @@
+{
+ "date": "2026-11-23",
+ "title": "Vietnam's FDI inflows hit a five-year high",
+ "src": {
+  "name": "VNA (vnanet.vn)",
+  "url": "https://vnanet.vn/en/tin-tuc/economy-423/page/234.html"
+ },
+ "en": [
+  "Vietnam drew US$50.36 billion in registered foreign direct investment in the first nine months of 2026, a 76.4% jump from a year earlier.",
+  "Disbursed FDI, which tracks capital actually put to work, climbed to US$21.07 billion, the highest level in five years.",
+  "The strong inflows are also fuelling demand for industrial property as new ring roads, metro lines and airport links come online.",
+  "Provinces such as Bac Ninh are increasingly courting high-tech projects in a bid to move up the value chain."
+ ],
+ "vi": [
+  "Việt Nam thu hút 50,36 tỷ USD vốn đầu tư trực tiếp nước ngoài đăng ký trong chín tháng đầu năm 2026, tăng vọt 76,4% so với cùng kỳ năm trước.",
+  "Vốn FDI giải ngân, tức phần vốn thực sự được đưa vào hoạt động, tăng lên 21,07 tỷ USD, mức cao nhất trong năm năm.",
+  "Dòng vốn mạnh cũng đang thúc đẩy nhu cầu bất động sản công nghiệp khi các tuyến đường vành đai, tuyến metro và kết nối sân bay mới lần lượt đi vào hoạt động.",
+  "Các tỉnh như Bắc Ninh ngày càng tích cực thu hút các dự án công nghệ cao nhằm leo lên nấc cao hơn trong chuỗi giá trị."
+ ],
+ "k": [
+  [
+   "registered",
+   "a 76.4% jump from a year earlier"
+  ],
+  [
+   "disbursed",
+   "put to work"
+  ],
+  [
+   "inflows",
+   "fuelling demand",
+   "come online"
+  ],
+  [
+   "courting",
+   "in a bid to",
+   "move up the value chain"
+  ]
+ ],
+ "vocab": [
+  {
+   "t": "registered FDI",
+   "k": "Cụm từ",
+   "vi": "vốn FDI đăng ký",
+   "note": "Số vốn nhà đầu tư cam kết khi xin cấp phép. Khác với disbursed FDI (vốn đã giải ngân).",
+   "ex": "Registered FDI often overstates how much money actually arrives.",
+   "exVi": "Vốn FDI đăng ký thường cao hơn số tiền thực sự chảy vào."
+  },
+  {
+   "t": "a … jump from a year earlier",
+   "k": "Cụm từ",
+   "vi": "tăng vọt … so với cùng kỳ năm trước",
+   "note": "Cách nói tự nhiên của báo chí thay cho “increased by … compared to last year”. Có thể thay jump bằng rise / drop / decline.",
+   "ex": "Retail sales posted a 9% rise from a year earlier.",
+   "exVi": "Doanh số bán lẻ tăng 9% so với cùng kỳ năm trước."
+  },
+  {
+   "t": "disbursed",
+   "k": "Từ",
+   "vi": "đã giải ngân",
+   "note": "Động từ disburse = giải ngân. Disbursement = sự giải ngân.",
+   "ex": "Only 40% of the public investment budget has been disbursed.",
+   "exVi": "Mới chỉ 40% ngân sách đầu tư công được giải ngân."
+  },
+  {
+   "t": "put to work",
+   "k": "Thành ngữ",
+   "vi": "đưa vào sử dụng (tiền, vốn)",
+   "note": "“Put money/capital to work” = cho tiền vào làm việc, tức đầu tư thực sự. Rất hay gặp trong tin đầu tư.",
+   "ex": "Funds are waiting for lower prices before putting their cash to work.",
+   "exVi": "Các quỹ đang chờ giá thấp hơn rồi mới giải ngân tiền mặt."
+  },
+  {
+   "t": "five-year high",
+   "k": "Cụm từ",
+   "vi": "mức cao nhất trong năm năm",
+   "note": "Mẫu “a + số + -year high/low”. Ví dụ: a record high, a 10-month low.",
+   "ex": "The dong weakened to a two-year low against the dollar.",
+   "exVi": "Đồng Việt Nam giảm xuống mức thấp nhất hai năm so với đô la."
+  },
+  {
+   "t": "inflows",
+   "k": "Từ",
+   "vi": "dòng vốn chảy vào",
+   "note": "Thường ở số nhiều. Ngược lại là outflows. Hay gặp: capital inflows, foreign inflows.",
+   "ex": "Foreign inflows into Vietnamese stocks slowed in October.",
+   "exVi": "Dòng vốn ngoại vào chứng khoán Việt Nam chậm lại trong tháng 10."
+  },
+  {
+   "t": "fuel demand",
+   "k": "Cụm động từ",
+   "vi": "thúc đẩy nhu cầu",
+   "note": "Fuel = tiếp nhiên liệu, nghĩa bóng là thúc đẩy. Đi với demand, growth, inflation, speculation.",
+   "ex": "Cheap credit fuelled demand for apartments in Hanoi.",
+   "exVi": "Tín dụng rẻ đã thúc đẩy nhu cầu căn hộ ở Hà Nội."
+  },
+  {
+   "t": "come online",
+   "k": "Cụm động từ",
+   "vi": "đi vào hoạt động",
+   "note": "Dùng cho nhà máy, hạ tầng, nguồn cung mới.",
+   "ex": "Two new factories will come online next year.",
+   "exVi": "Hai nhà máy mới sẽ đi vào hoạt động năm tới."
+  },
+  {
+   "t": "court",
+   "k": "Từ",
+   "vi": "tích cực lôi kéo, thu hút",
+   "note": "Động từ, nghĩa gốc là tán tỉnh. Court investors / court buyers.",
+   "ex": "Several countries are courting chipmakers with tax breaks.",
+   "exVi": "Nhiều nước đang lôi kéo các hãng chip bằng ưu đãi thuế."
+  },
+  {
+   "t": "in a bid to",
+   "k": "Cụm từ",
+   "vi": "nhằm, với nỗ lực để",
+   "note": "Theo sau là động từ nguyên mẫu. Rất phổ biến trên báo, thay cho in order to.",
+   "ex": "The firm cut prices in a bid to win back customers.",
+   "exVi": "Công ty giảm giá nhằm giành lại khách hàng."
+  },
+  {
+   "t": "move up the value chain",
+   "k": "Thành ngữ",
+   "vi": "leo lên nấc cao hơn trong chuỗi giá trị",
+   "note": "Chuyển từ gia công giá trị thấp sang sản xuất, thiết kế giá trị cao hơn.",
+   "ex": "Vietnam wants to move up the value chain beyond assembly.",
+   "exVi": "Việt Nam muốn vượt khỏi khâu lắp ráp để leo lên nấc cao hơn trong chuỗi giá trị."
+  }
+ ]
+}

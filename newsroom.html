@@ -120,7 +120,10 @@ textarea{resize:vertical;min-height:80px}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:14px;font-weight:800;z-index:40;max-width:90vw;text-align:center}
 @media(prefers-reduced-motion:reduce){.bob,.pulse,.giftb,.flake,.conf i{animation:none}}
 @media(max-width:600px){.top{grid-template-columns:1fr}.today{grid-template-columns:auto minmax(0,1fr)}.today .btn{grid-column:1/-1}.en{font-size:17px}}
-.appnav{position:sticky;top:0;z-index:8;display:flex;justify-content:center;gap:6px;padding:8px 12px calc(8px);background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-bottom:2px solid rgba(0,0,0,.05)}.appnav a{font:700 14px/1 "Nunito","Be Vietnam Pro",system-ui,sans-serif;text-decoration:none;color:#8A7896;padding:10px 16px;border-radius:99px;min-height:40px;display:inline-flex;align-items:center}.appnav a.on{color:#fff;background:#E0588C}.appnav a.on.x{background:#1F6B32}</style>
+.appnav{position:sticky;top:0;z-index:8;display:flex;justify-content:center;gap:6px;padding:8px 12px calc(8px);background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-bottom:2px solid rgba(0,0,0,.05)}.appnav a{font:700 14px/1 "Nunito","Be Vietnam Pro",system-ui,sans-serif;text-decoration:none;color:#8A7896;padding:10px 16px;border-radius:99px;min-height:40px;display:inline-flex;align-items:center}.appnav a.on{color:#fff;background:#E0588C}.appnav a.on.x{background:#1F6B32}#syncbar{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;font:700 13px/1.3 Nunito,system-ui,sans-serif;color:var(--soft);padding:6px 12px}#syncbar button{border:0;background:none;color:var(--lavD);font:800 13px Nunito,sans-serif;text-decoration:underline;cursor:pointer;padding:6px}</style>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
 <nav class="appnav"><a href="./" class="">Excel</a><a href="english.html" class="">Từ vựng</a><a href="newsroom.html" class="on ">Newsroom</a></nav>
@@ -157,9 +160,11 @@ const pick=a=>a[Math.floor(Math.random()*a.length)];
 const uid=()=>Math.random().toString(36).slice(2,9);
 function keyHit(txt,key){const t=' '+norm(txt)+' ';return norm(key.replace('…',' ')).split(' ').filter(x=>x.length>2).every(k=>t.includes(k.replace(/(ing|ed|es|s)$/,'')))}
 
-let S={done:{},words:[],mistakes:[],accs:[],wear:'',gifts:{},fixed:0};
+const blankNews=()=>({done:{},words:[],mistakes:[],accs:[],wear:'',gifts:{},fixed:0});
+let S=blankNews();
 try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const saveRaw=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const save=()=>{S.updated=Date.now();saveRaw();if(typeof SYNC!=='undefined')SYNC.push()};
 let tab='map',theme=null,lv=null,q='';
 const monthTheme=()=>{const m=+TODAY.slice(5,7);return m===12?'snow':(m<=2?'tet':'autumn')};
 
@@ -264,7 +269,7 @@ function render(){document.querySelectorAll('.tab').forEach(b=>b.classList.toggl
  if(tab==='map'){const b=document.getElementById('mapbox');ro=new ResizeObserver(()=>drawMap());ro.observe(b)}}
 function mapView(){const ci=ORDER.findIndex(d=>!S.done[d]),cd=ci>=0?ORDER[ci]:null,cur=cd?byDate[cd]:null;
  const wear=ACCS.find(a=>a.id===S.wear);const stars=Object.values(S.done).reduce((a,x)=>a+x.stars,0);
- return`<div class="top"><div><h1>Newsroom</h1><div class="small muted">Mỗi sáng có bài mới · tiến độ lưu trên máy này</div></div>
+ return`<div class="top"><div><h1>Newsroom</h1><div class="small muted">Mỗi sáng có bài mới</div></div>
 <div class="mini"><span class="m2"><b>${doneCount()}</b>Bài đã học</span><span class="m1"><b>${stars}</b>Sao</span><span class="m3"><b>${S.words.length}</b>Từ đã lưu</span></div></div>
 <div class="card mapcard"><div class="mapbox" id="mapbox"></div></div>
 <div class="card today">${mascot('pink',wear?wear.id:'')}<div>${cur?`<div class="small" style="color:var(--pinkD);font-weight:800">Ngày ${ci+1}</div><h3>${esc(cur.title)}</h3><div class="small muted">${cur.en.length} câu · ${cur.vocab.length} từ và cụm từ · nguồn ${esc(cur.src.name)}</div>`:`<h3>Bạn đã học hết các bài!</h3><div class="small muted">Bài mới được thêm vào mỗi sáng.</div>`}</div>${cur?`<button class="btn pink" data-open="${cd}">Bắt đầu</button>`:''}</div>`}
@@ -372,7 +377,45 @@ async function boot(){$('#app').innerHTML='<p class="muted" style="text-align:ce
   const list=await Promise.all(idx.map(d=>fetch('news/'+d+'.json').then(r=>r.ok?r.json():null).catch(()=>null)));
   NEWS=list.filter(Boolean);}catch(e){NEWS=[]}
  NEWS.forEach(n=>byDate[n.date]=n);ORDER=NEWS.map(n=>n.date).sort();render()}
-boot();
+/* ---------- Đồng bộ qua Firebase (cùng tài khoản với My Life Dashboard) ---------- */
+const SYNC=(function(){
+ const CFG={apiKey:"AIzaSyBOUCXDR6U5h9DBkeKzLmcuhOqZbscCsnY",authDomain:"nora-apps-e3607.firebaseapp.com",projectId:"nora-apps-e3607",storageBucket:"nora-apps-e3607.firebasestorage.app",messagingSenderId:"858032496117",appId:"1:858032496117:web:02e8a0e223caeddc7994bc"};
+ let FB=null,doc=null,ok=false,user=null,timer=null,pending=null,A=null;
+ try{if(window.firebase){firebase.initializeApp(CFG);FB={auth:firebase.auth(),db:firebase.firestore()}}}catch(e){FB=null}
+ const ex=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function bar(t){let b=document.getElementById('syncbar');if(!b){b=document.createElement('div');b.id='syncbar';const nav=document.querySelector('.appnav');nav?nav.after(b):document.body.prepend(b)}
+  b.innerHTML=`<span>${ex(t)}</span>${user?'<button type="button" data-sync="out">Đăng xuất</button>':FB?'<button type="button" data-sync="in">Đăng nhập để đồng bộ</button>':''}`}
+ function err(e){const c=(e&&e.code)||'';return /invalid-email/.test(c)?'Email chưa đúng định dạng.':/(wrong-password|user-not-found|invalid-credential|invalid-login)/.test(c)?'Email hoặc mật khẩu chưa đúng.':/too-many-requests/.test(c)?'Thử sai nhiều lần quá, đợi một lát rồi thử lại nhé.':/network/.test(c)?'Không có mạng. Kiểm tra kết nối rồi thử lại.':'Có lỗi xảy ra'+(c?' ('+c+')':'')+'. Thử lại nhé.'}
+ function gate(show){let g=document.getElementById('gate');if(!show){if(g)g.remove();return}if(g)return;
+  g=document.createElement('div');g.id='gate';g.className='modal';
+  g.innerHTML=`<form class="card" id="gForm" style="text-align:left"><h2 style="margin-bottom:6px">Đăng nhập</h2><p class="muted small" style="margin-top:0">Dùng đúng tài khoản của My Life Dashboard để tiến độ học tự đồng bộ giữa điện thoại và máy tính.</p>
+<label for="gEmail">Email</label><input id="gEmail" type="email" autocomplete="email" required>
+<label for="gPass">Mật khẩu</label><input id="gPass" type="password" autocomplete="current-password" minlength="6" required>
+<p id="gMsg" class="small" role="alert" style="min-height:1.4em;color:var(--pinkD)"></p>
+<div style="display:grid;gap:10px"><button class="btn wide" type="submit">Đăng nhập</button><button class="btn ghost wide" type="button" data-sync="reset">Quên mật khẩu?</button><button class="btn ghost wide" type="button" data-sync="later">Để sau, chỉ lưu trên máy này</button></div></form>`;
+  document.body.appendChild(g);
+  g.querySelector('#gForm').addEventListener('submit',e=>{e.preventDefault();const m=g.querySelector('#gMsg');m.textContent='Đang đăng nhập…';FB.auth.signInWithEmailAndPassword(g.querySelector('#gEmail').value.trim(),g.querySelector('#gPass').value).catch(x=>m.textContent=err(x))})}
+ function adopt(d){A.set(JSON.parse(d.data),d.updated||0);A.render()}
+ function push(){if(!ok||!doc)return;clearTimeout(timer);bar('Đang lưu…');timer=setTimeout(()=>{const s=A.get();doc.set({data:JSON.stringify(s),updated:s.updated||Date.now()}).then(()=>bar('Đã đồng bộ'),e=>bar('Chưa đồng bộ được'+(e&&e.code?' ('+e.code+')':'')+' · vẫn lưu trên máy này'))},1200)}
+ function init(app,api){A=api;if(!FB){bar('Đang lưu trên máy này');return}
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-sync]');if(!b)return;const k=b.dataset.sync;
+   if(k==='in'){try{sessionStorage.removeItem('lumora-later')}catch(x){}gate(true)}
+   else if(k==='later'){try{sessionStorage.setItem('lumora-later','1')}catch(x){}gate(false)}
+   else if(k==='out')FB.auth.signOut();
+   else if(k==='reset'){const em=document.getElementById('gEmail').value.trim(),m=document.getElementById('gMsg');if(!em){m.textContent='Nhập email trước rồi bấm Quên mật khẩu.';return}FB.auth.sendPasswordResetEmail(em).then(()=>m.textContent='Đã gửi email đặt lại mật khẩu, kiểm tra hộp thư nhé.',x=>m.textContent=err(x))}});
+  setInterval(()=>{if(pending&&!A.busy()){const d=pending;pending=null;if((d.updated||0)>(A.get().updated||0)){adopt(d);bar('Đã đồng bộ')}}},2500);
+  FB.auth.onAuthStateChanged(u=>{user=u;ok=false;doc=null;
+   if(!u){bar('Chưa đăng nhập · đang lưu trên máy này');let later=false;try{later=!!sessionStorage.getItem('lumora-later')}catch(x){}if(!later)gate(true);return}
+   gate(false);bar('Đang đồng bộ…');
+   doc=FB.db.collection('users').doc(u.uid).collection('lumora').doc(app);
+   doc.get().then(sn=>{const r=sn.exists?sn.data():null,L=A.get();
+    if(r&&r.data&&(r.updated||0)>(L.updated||0))adopt(r);
+    ok=true;if(!r||!r.data||(A.get().updated||0)>(r.updated||0))push();else bar('Đã đồng bộ');
+    doc.onSnapshot(s=>{const d=s.data();if(!d||s.metadata.hasPendingWrites||!d.data)return;if((d.updated||0)>(A.get().updated||0)){if(A.busy()){pending=d;bar('Có dữ liệu mới từ máy khác, sẽ cập nhật khi bạn xong bài');return}adopt(d);bar('Đã đồng bộ')}})
+   }).catch(e=>bar('Chưa đồng bộ được'+(e&&e.code?' ('+e.code+')':'')+' · vẫn lưu trên máy này'))})}
+ return{init,push}})();
+
+boot().then(()=>SYNC.init('newsroom',{get:()=>S,set:(o,u)=>{S=Object.assign(blankNews(),o);S.updated=u;saveRaw()},render:()=>{if(tab)render()},busy:()=>!!document.querySelector('#ov .ov,.modal:not(#gate)')}));
 }
 </script>
 </body>

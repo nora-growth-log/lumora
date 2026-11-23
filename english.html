@@ -136,7 +136,10 @@ details summary::-webkit-details-marker{display:none}
 .acts{grid-template-columns:1fr}.act{flex-direction:row;min-height:64px;justify-content:flex-start;text-align:left;gap:14px}
 .opts{grid-template-columns:1fr}
 .q{font-size:20px}}
-.appnav{position:sticky;top:0;z-index:8;display:flex;justify-content:center;gap:6px;padding:8px 12px calc(8px);background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-bottom:2px solid rgba(0,0,0,.05)}.appnav a{font:700 14px/1 "Nunito","Be Vietnam Pro",system-ui,sans-serif;text-decoration:none;color:#8A7896;padding:10px 16px;border-radius:99px;min-height:40px;display:inline-flex;align-items:center}.appnav a.on{color:#fff;background:#E0588C}.appnav a.on.x{background:#1F6B32}</style>
+.appnav{position:sticky;top:0;z-index:8;display:flex;justify-content:center;gap:6px;padding:8px 12px calc(8px);background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-bottom:2px solid rgba(0,0,0,.05)}.appnav a{font:700 14px/1 "Nunito","Be Vietnam Pro",system-ui,sans-serif;text-decoration:none;color:#8A7896;padding:10px 16px;border-radius:99px;min-height:40px;display:inline-flex;align-items:center}.appnav a.on{color:#fff;background:#E0588C}.appnav a.on.x{background:#1F6B32}#syncbar{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;font:700 13px/1.3 Nunito,system-ui,sans-serif;color:var(--soft);padding:6px 12px}#syncbar button{border:0;background:none;color:var(--lavD);font:800 13px Nunito,sans-serif;text-decoration:underline;cursor:pointer;padding:6px}</style>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
 <nav class="appnav"><a href="./" class="">Excel</a><a href="english.html" class="on ">Từ vựng</a><a href="newsroom.html" class="">Newsroom</a></nav>
@@ -259,7 +262,8 @@ function lev(a,b){const m=a.length,n=b.length;const d=Array.from({length:m+1},(_
 function blankState(){return{words:[],paras:[],mistakes:[],log:{},stickers:{},settings:{newPerDay:8,maxRev:60,rate:.9},stats:{sessions:0,paras:0,fixed:0}}}
 function load(){let st=null;try{const r=localStorage.getItem(KEY);if(r)st=JSON.parse(r)}catch(e){}
  if(!st){st=blankState();importData(st,SAMPLE)}return st}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function saveRaw(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function save(){S.updated=Date.now();saveRaw();if(typeof SYNC!=='undefined')SYNC.push()}
 function logT(){const t=today();return S.log[t]||(S.log[t]={rev:0,nw:0,para:0,done:false})}
 
 function importData(st,data){
@@ -274,7 +278,7 @@ function importData(st,data){
  const p=data.para;if(p&&Array.isArray(p.vi)&&p.vi.length){st.paras.push({id:uid(),title:p.title||data.lesson||'Đoạn dịch',vi:p.vi.slice(0,5),en:(p.en||[]).slice(0,5),k:(p.k||[]).slice(0,5),done:null,mine:null});res.paras++}
  return res}
 
-let S=load();save();
+let S=load();saveRaw();
 let tab='home',filt='all',q='';
 
 /* ---------- speech ---------- */
@@ -334,7 +338,7 @@ function home(){const c=counts(),st=streak(),p=todayPara(),[mc,ma]=curMascot();
  if(nx){const v=stv(nx.k),pc=Math.min(100,Math.round(v/nx.n*100));nxt=`<div class="card next">${mascot(nx.c,nx.a)}<div class="grow" style="flex:1"><b>Sticker tiếp theo: ${esc(nx.name)}</b><div class="small muted">${esc(nx.d)} · ${v}/${nx.n}</div><div class="bar"><i style="width:${pc}%"></i></div></div></div>`}
  const total=c.due+c.nw+c.mis;
  const low=lowWords().length;
- return`<div class="topline"><span class="small muted">Tiến độ lưu trên máy này</span><button class="iconbtn" data-act="settings" aria-label="Cài đặt">${ICON.gear}</button></div>
+ return`<div class="topline"><span class="small muted">Lumora · Từ vựng</span><button class="iconbtn" data-act="settings" aria-label="Cài đặt">${ICON.gear}</button></div>
 <div class="card hero pop"><div><p class="date">${new Date().toLocaleDateString("vi-VN",{weekday:"long",day:"numeric",month:"numeric"})}</p><h1>Chào Nora!</h1><p>${st?`Chuỗi ${st} ngày, giữ lửa nhé!`:'Hôm nay mình bắt đầu chuỗi mới nhé!'}</p><p class="small" style="opacity:.85">${total?`Có ${total} thẻ đang chờ bạn.`:'Hôm nay ôn xong rồi, giỏi quá!'}</p></div>${mascot(mc,ma)}</div>
 <div class="stats"><div class="stat s1"><b>${st}</b><span>Chuỗi ngày</span></div><div class="stat s2"><b>${c.due}</b><span>Đến hạn</span></div><div class="stat s3"><b>${c.nw}</b><span>Từ mới</span></div><div class="stat s4"><b>${mastered()}</b><span>Đã thuộc</span></div></div>
 <div class="acts"><button class="btn act a1" data-act="review" ${total?'':'disabled'}>${ICON.rev}<span>Ôn hôm nay<small>${total?`${c.due} ôn · ${c.nw} mới${c.mis?` · ${c.mis} lỗi`:''}`:'Đã xong'}</small></span></button>
@@ -410,7 +414,7 @@ function settingsView(){const s=S.settings;openOv(`<div class="ovhead"><button c
 <label for="sr">Lượt ôn tối đa mỗi ngày</label><input id="sr" type="number" min="10" max="300" value="${s.maxRev}">
 <label for="sp">Tốc độ đọc: <span id="spv">${s.rate}</span></label><input id="sp" type="range" min="0.6" max="1.2" step="0.05" value="${s.rate}" style="padding:0">
 <div class="row" style="margin-top:12px;gap:10px"><button class="btn sky" data-say="This is how I sound. Have a nice day, Nora!">Nghe thử</button><button class="btn" data-act="savesettings">Lưu cài đặt</button></div></div>
-<div class="card"><b>Sao lưu dữ liệu</b><p class="small muted">Dữ liệu lưu trên máy này. Copy bản sao lưu để giữ an toàn hoặc chuyển sang máy khác.</p>
+<div class="card"><b>Sao lưu dữ liệu</b><p class="small muted">Khi đăng nhập, dữ liệu tự đồng bộ giữa các máy. Bạn vẫn có thể copy bản sao lưu để giữ riêng. Copy bản sao lưu để giữ an toàn hoặc chuyển sang máy khác.</p>
 <div class="row" style="gap:10px;flex-wrap:wrap"><button class="btn ghost" data-act="backup">Copy bản sao lưu</button></div>
 <label for="rs">Khôi phục từ bản sao lưu</label><textarea id="rs" placeholder="Dán bản sao lưu vào đây"></textarea><button class="btn lav" style="margin-top:10px" data-act="restore">Khôi phục</button>
 <div style="margin-top:16px"><button class="btn peach" data-act="reset" id="resetbtn">Xóa toàn bộ, làm lại từ đầu</button></div></div></div>`)}
@@ -582,7 +586,46 @@ document.addEventListener('input',e=>{const t=e.target;
  if(t.id==='sp')$('#spv').textContent=t.value;
  if(t.dataset&&t.dataset.pi!==undefined&&pv)pv.vals[+t.dataset.pi]=t.value});
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.id==='ta'){e.preventDefault();check()}});
+/* ---------- Đồng bộ qua Firebase (cùng tài khoản với My Life Dashboard) ---------- */
+const SYNC=(function(){
+ const CFG={apiKey:"AIzaSyBOUCXDR6U5h9DBkeKzLmcuhOqZbscCsnY",authDomain:"nora-apps-e3607.firebaseapp.com",projectId:"nora-apps-e3607",storageBucket:"nora-apps-e3607.firebasestorage.app",messagingSenderId:"858032496117",appId:"1:858032496117:web:02e8a0e223caeddc7994bc"};
+ let FB=null,doc=null,ok=false,user=null,timer=null,pending=null,A=null;
+ try{if(window.firebase){firebase.initializeApp(CFG);FB={auth:firebase.auth(),db:firebase.firestore()}}}catch(e){FB=null}
+ const ex=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function bar(t){let b=document.getElementById('syncbar');if(!b){b=document.createElement('div');b.id='syncbar';const nav=document.querySelector('.appnav');nav?nav.after(b):document.body.prepend(b)}
+  b.innerHTML=`<span>${ex(t)}</span>${user?'<button type="button" data-sync="out">Đăng xuất</button>':FB?'<button type="button" data-sync="in">Đăng nhập để đồng bộ</button>':''}`}
+ function err(e){const c=(e&&e.code)||'';return /invalid-email/.test(c)?'Email chưa đúng định dạng.':/(wrong-password|user-not-found|invalid-credential|invalid-login)/.test(c)?'Email hoặc mật khẩu chưa đúng.':/too-many-requests/.test(c)?'Thử sai nhiều lần quá, đợi một lát rồi thử lại nhé.':/network/.test(c)?'Không có mạng. Kiểm tra kết nối rồi thử lại.':'Có lỗi xảy ra'+(c?' ('+c+')':'')+'. Thử lại nhé.'}
+ function gate(show){let g=document.getElementById('gate');if(!show){if(g)g.remove();return}if(g)return;
+  g=document.createElement('div');g.id='gate';g.className='modal';
+  g.innerHTML=`<form class="card" id="gForm" style="text-align:left"><h2 style="margin-bottom:6px">Đăng nhập</h2><p class="muted small" style="margin-top:0">Dùng đúng tài khoản của My Life Dashboard để tiến độ học tự đồng bộ giữa điện thoại và máy tính.</p>
+<label for="gEmail">Email</label><input id="gEmail" type="email" autocomplete="email" required>
+<label for="gPass">Mật khẩu</label><input id="gPass" type="password" autocomplete="current-password" minlength="6" required>
+<p id="gMsg" class="small" role="alert" style="min-height:1.4em;color:var(--pinkD)"></p>
+<div style="display:grid;gap:10px"><button class="btn wide" type="submit">Đăng nhập</button><button class="btn ghost wide" type="button" data-sync="reset">Quên mật khẩu?</button><button class="btn ghost wide" type="button" data-sync="later">Để sau, chỉ lưu trên máy này</button></div></form>`;
+  document.body.appendChild(g);
+  g.querySelector('#gForm').addEventListener('submit',e=>{e.preventDefault();const m=g.querySelector('#gMsg');m.textContent='Đang đăng nhập…';FB.auth.signInWithEmailAndPassword(g.querySelector('#gEmail').value.trim(),g.querySelector('#gPass').value).catch(x=>m.textContent=err(x))})}
+ function adopt(d){A.set(JSON.parse(d.data),d.updated||0);A.render()}
+ function push(){if(!ok||!doc)return;clearTimeout(timer);bar('Đang lưu…');timer=setTimeout(()=>{const s=A.get();doc.set({data:JSON.stringify(s),updated:s.updated||Date.now()}).then(()=>bar('Đã đồng bộ'),e=>bar('Chưa đồng bộ được'+(e&&e.code?' ('+e.code+')':'')+' · vẫn lưu trên máy này'))},1200)}
+ function init(app,api){A=api;if(!FB){bar('Đang lưu trên máy này');return}
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-sync]');if(!b)return;const k=b.dataset.sync;
+   if(k==='in'){try{sessionStorage.removeItem('lumora-later')}catch(x){}gate(true)}
+   else if(k==='later'){try{sessionStorage.setItem('lumora-later','1')}catch(x){}gate(false)}
+   else if(k==='out')FB.auth.signOut();
+   else if(k==='reset'){const em=document.getElementById('gEmail').value.trim(),m=document.getElementById('gMsg');if(!em){m.textContent='Nhập email trước rồi bấm Quên mật khẩu.';return}FB.auth.sendPasswordResetEmail(em).then(()=>m.textContent='Đã gửi email đặt lại mật khẩu, kiểm tra hộp thư nhé.',x=>m.textContent=err(x))}});
+  setInterval(()=>{if(pending&&!A.busy()){const d=pending;pending=null;if((d.updated||0)>(A.get().updated||0)){adopt(d);bar('Đã đồng bộ')}}},2500);
+  FB.auth.onAuthStateChanged(u=>{user=u;ok=false;doc=null;
+   if(!u){bar('Chưa đăng nhập · đang lưu trên máy này');let later=false;try{later=!!sessionStorage.getItem('lumora-later')}catch(x){}if(!later)gate(true);return}
+   gate(false);bar('Đang đồng bộ…');
+   doc=FB.db.collection('users').doc(u.uid).collection('lumora').doc(app);
+   doc.get().then(sn=>{const r=sn.exists?sn.data():null,L=A.get();
+    if(r&&r.data&&(r.updated||0)>(L.updated||0))adopt(r);
+    ok=true;if(!r||!r.data||(A.get().updated||0)>(r.updated||0))push();else bar('Đã đồng bộ');
+    doc.onSnapshot(s=>{const d=s.data();if(!d||s.metadata.hasPendingWrites||!d.data)return;if((d.updated||0)>(A.get().updated||0)){if(A.busy()){pending=d;bar('Có dữ liệu mới từ máy khác, sẽ cập nhật khi bạn xong bài');return}adopt(d);bar('Đã đồng bộ')}})
+   }).catch(e=>bar('Chưa đồng bộ được'+(e&&e.code?' ('+e.code+')':'')+' · vẫn lưu trên máy này'))})}
+ return{init,push}})();
+
 render();
+SYNC.init('english',{get:()=>S,set:(o,u)=>{S=Object.assign(blankState(),o);S.updated=u;saveRaw()},render:()=>render(),busy:()=>!!document.querySelector('#ov .ov,.modal:not(#gate)')});
 }
 </script>
 </body>

@@ -1,0 +1,141 @@
+{
+ "date": "2026-11-25",
+ "title": "Foreign money slow to follow Vietnam's FTSE upgrade",
+ "src": {
+  "name": "VNA (VietnamPlus)",
+  "url": "https://en.vietnamplus.vn/stock-market-seeks-to-turn-expectations-into-reality-after-ftse-russell-upgrade-post355942.vnp"
+ },
+ "en": [
+  "Vietnam's long-awaited upgrade to secondary emerging market status by FTSE Russell has yet to translate into a wave of foreign money, with overseas investors remaining net sellers throughout the first ten months of 2026.",
+  "Foreign selling on the Ho Chi Minh City Stock Exchange peaked in October at 24.02 trillion VND (about $930 million), the heaviest monthly outflow so far this year, as the VN-Index slipped 1.53% to close the month at 1,741.62 points.",
+  "Tran Thi Khanh Hien, head of research at MB Securities, expects the bulk of upgrade-related inflows to arrive only in the second half of 2027, warning that the first half is likely to remain an uphill battle.",
+  "To win over global investors, regulators are pressing ahead with reforms such as a non-prefunding mechanism and a central counterparty system, while experts argue the market still needs a deeper pool of quality listed firms and tighter corporate governance."
+ ],
+ "vi": [
+  "Việc FTSE Russell nâng hạng Việt Nam lên thị trường mới nổi thứ cấp, vốn được chờ đợi từ lâu, vẫn chưa mang lại một làn sóng vốn ngoại, khi nhà đầu tư nước ngoài tiếp tục bán ròng suốt 10 tháng đầu năm 2026.",
+  "Lực bán của khối ngoại trên Sở Giao dịch Chứng khoán TP.HCM lên đỉnh vào tháng 10 với 24.020 tỷ đồng (khoảng 930 triệu USD), mức rút vốn theo tháng lớn nhất từ đầu năm, trong khi VN-Index giảm nhẹ 1,53% và chốt tháng ở 1.741,62 điểm.",
+  "Bà Trần Thị Khánh Hiền, Giám đốc Khối Phân tích của Chứng khoán MB, dự báo phần lớn dòng vốn gắn với việc nâng hạng chỉ đổ về trong nửa cuối năm 2027, đồng thời cảnh báo nửa đầu năm nhiều khả năng vẫn sẽ đầy khó khăn.",
+  "Để thu hút nhà đầu tư toàn cầu, các cơ quan quản lý đang đẩy mạnh cải cách như cơ chế giao dịch không cần ký quỹ trước và hệ thống đối tác bù trừ trung tâm, trong khi giới chuyên gia cho rằng thị trường vẫn cần thêm nhiều doanh nghiệp niêm yết chất lượng và quản trị doanh nghiệp chặt chẽ hơn."
+ ],
+ "k": [
+  [
+   "long-awaited",
+   "has yet to translate into",
+   "net sellers"
+  ],
+  [
+   "peaked",
+   "the heaviest monthly outflow",
+   "slipped"
+  ],
+  [
+   "the bulk of",
+   "inflows",
+   "an uphill battle"
+  ],
+  [
+   "win over",
+   "pressing ahead with",
+   "a deeper pool of",
+   "corporate governance"
+  ]
+ ],
+ "vocab": [
+  {
+   "t": "long-awaited",
+   "k": "Từ",
+   "vi": "được chờ đợi từ lâu",
+   "note": "Tính từ ghép đứng trước danh từ: a long-awaited reform/deal/recovery. Hay dùng khi một sự kiện được thị trường mong ngóng.",
+   "ex": "The long-awaited trade deal finally came into force in January.",
+   "exVi": "Hiệp định thương mại được chờ đợi từ lâu cuối cùng đã có hiệu lực vào tháng Giêng."
+  },
+  {
+   "t": "yet to translate into …",
+   "k": "Cụm từ",
+   "vi": "chưa chuyển hóa thành, chưa mang lại …",
+   "note": "have/has yet to + V = vẫn chưa; translate into = biến thành kết quả cụ thể. Dùng khi kỳ vọng chưa thành hiện thực.",
+   "ex": "Lower interest rates have yet to translate into stronger consumer spending.",
+   "exVi": "Lãi suất thấp hơn vẫn chưa chuyển hóa thành sức chi tiêu tiêu dùng mạnh hơn."
+  },
+  {
+   "t": "net seller",
+   "k": "Cụm từ",
+   "vi": "bên bán ròng",
+   "note": "Nhà đầu tư bán nhiều hơn mua trong một kỳ. Trái nghĩa: net buyer. Thường đi với be/remain/turn net sellers.",
+   "ex": "Foreign funds turned net sellers of Asian equities last week.",
+   "exVi": "Các quỹ ngoại chuyển sang bán ròng cổ phiếu châu Á tuần trước."
+  },
+  {
+   "t": "peak",
+   "k": "Từ",
+   "vi": "đạt đỉnh",
+   "note": "Động từ: peak at + con số / peak in + thời điểm. Danh từ: at its peak = lúc cao nhất.",
+   "ex": "Inflation peaked at 9% before easing in the second half of the year.",
+   "exVi": "Lạm phát đạt đỉnh 9% trước khi hạ nhiệt trong nửa cuối năm."
+  },
+  {
+   "t": "outflow",
+   "k": "Từ",
+   "vi": "dòng vốn rút ra",
+   "note": "Tiền chảy ra khỏi một thị trường/quỹ/quốc gia. Đối lập với inflow. Hay gặp: capital outflows, heavy outflows.",
+   "ex": "The central bank raised rates to stem capital outflows.",
+   "exVi": "Ngân hàng trung ương tăng lãi suất để ngăn dòng vốn tháo chạy."
+  },
+  {
+   "t": "slip",
+   "k": "Từ",
+   "vi": "giảm nhẹ, trượt xuống",
+   "note": "Diễn tả mức giảm nhỏ (nhẹ hơn fall/drop, nhẹ hơn nhiều so với plunge). Cấu trúc: slip + % / slip to + mức.",
+   "ex": "The dong slipped 0.2% against the dollar this week.",
+   "exVi": "Đồng Việt Nam giảm nhẹ 0,2% so với USD trong tuần này."
+  },
+  {
+   "t": "the bulk of …",
+   "k": "Cụm từ",
+   "vi": "phần lớn …",
+   "note": "Trang trọng hơn most of; dùng cho tiền, vốn, doanh thu, công việc.",
+   "ex": "The bulk of the company's revenue comes from exports.",
+   "exVi": "Phần lớn doanh thu của công ty đến từ xuất khẩu."
+  },
+  {
+   "t": "inflow",
+   "k": "Từ",
+   "vi": "dòng vốn chảy vào",
+   "note": "Thường ở số nhiều: foreign inflows, FDI inflows, ETF inflows.",
+   "ex": "Steady inflows into bond funds helped push yields lower.",
+   "exVi": "Dòng tiền đổ đều vào các quỹ trái phiếu đã góp phần kéo lợi suất xuống."
+  },
+  {
+   "t": "an uphill battle",
+   "k": "Thành ngữ",
+   "vi": "cuộc chiến khó khăn, việc rất gian nan",
+   "note": "Việc phải nỗ lực rất nhiều vì gặp nhiều trở ngại. Thường: face/be an uphill battle.",
+   "ex": "Small lenders face an uphill battle to compete with state-owned banks.",
+   "exVi": "Các ngân hàng nhỏ gặp rất nhiều khó khăn khi cạnh tranh với ngân hàng quốc doanh."
+  },
+  {
+   "t": "win over",
+   "k": "Cụm động từ",
+   "vi": "thuyết phục, chinh phục (ai đó)",
+   "note": "Làm cho ai ủng hộ/tin tưởng mình: win over investors/customers/sceptics. Tân ngữ có thể đứng giữa: win investors over.",
+   "ex": "The startup is trying to win over sceptical investors with a clearer path to profit.",
+   "exVi": "Công ty khởi nghiệp đang cố thuyết phục những nhà đầu tư còn hoài nghi bằng lộ trình có lãi rõ ràng hơn."
+  },
+  {
+   "t": "press ahead with …",
+   "k": "Cụm động từ",
+   "vi": "kiên trì xúc tiến, đẩy mạnh …",
+   "note": "Tiếp tục làm dù có khó khăn hoặc phản đối. Đồng nghĩa: push ahead with, forge ahead with.",
+   "ex": "The government is pressing ahead with plans to cut corporate tax.",
+   "exVi": "Chính phủ đang kiên trì xúc tiến kế hoạch cắt giảm thuế doanh nghiệp."
+  },
+  {
+   "t": "corporate governance",
+   "k": "Cụm từ",
+   "vi": "quản trị doanh nghiệp",
+   "note": "Hệ thống quy tắc kiểm soát, minh bạch, trách nhiệm của ban lãnh đạo. Hay đi với: strong/weak/tighter corporate governance.",
+   "ex": "Weak corporate governance remains a key concern for foreign funds.",
+   "exVi": "Quản trị doanh nghiệp yếu kém vẫn là mối lo chính của các quỹ ngoại."
+  }
+ ]
+}

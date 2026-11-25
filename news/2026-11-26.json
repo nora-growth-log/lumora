@@ -1,0 +1,142 @@
+{
+ "date": "2026-11-26",
+ "title": "Hot US data reinforce bets on a December Fed hike",
+ "src": {
+  "name": "Reuters (via WTAQ)",
+  "url": "https://wtaq.com/2026/11/25/us-stock-futures-extend-losses-after-economic-data/"
+ },
+ "en": [
+  "US inflation stayed stubbornly high in October, with the personal consumption expenditures (PCE) price index, the Federal Reserve's preferred gauge, rising 0.3% on the month and 3.8% from a year earlier, squarely in line with forecasts.",
+  "Separate figures showed the economy expanded at a robust 4.3% pace in the third quarter, comfortably beating economists' expectations of 3.5%.",
+  "Weekly jobless claims also came in lower than expected, at 189,000 for the week ended Nov. 21, against estimates of 200,000.",
+  "The data reinforced bets on a Fed rate hike in December, and Wall Street futures extended their losses, with Nasdaq 100 contracts sliding more than 3% in premarket trade."
+ ],
+ "vi": [
+  "Lạm phát Mỹ vẫn neo cao dai dẳng trong tháng 10, khi chỉ số giá chi tiêu tiêu dùng cá nhân (PCE), thước đo được Cục Dự trữ Liên bang (Fed) ưa dùng, tăng 0,3% so với tháng trước và 3,8% so với cùng kỳ năm ngoái, hoàn toàn khớp với dự báo.",
+  "Số liệu riêng cho thấy nền kinh tế tăng trưởng với tốc độ mạnh mẽ 4,3% trong quý III, vượt xa mức 3,5% mà các nhà kinh tế dự báo.",
+  "Số đơn xin trợ cấp thất nghiệp hằng tuần cũng thấp hơn dự kiến, ở mức 189.000 đơn trong tuần kết thúc ngày 21/11, so với ước tính 200.000 đơn.",
+  "Các số liệu này củng cố đặt cược rằng Fed sẽ tăng lãi suất vào tháng 12, và hợp đồng tương lai trên Phố Wall nới rộng đà giảm, với hợp đồng Nasdaq 100 trượt hơn 3% trong phiên giao dịch trước giờ mở cửa."
+ ],
+ "k": [
+  [
+   "stubbornly high",
+   "preferred gauge",
+   "from a year earlier",
+   "squarely in line with forecasts"
+  ],
+  [
+   "at a robust 4.3% pace",
+   "comfortably beating",
+   "expectations"
+  ],
+  [
+   "jobless claims",
+   "came in lower than expected",
+   "for the week ended"
+  ],
+  [
+   "reinforced bets on",
+   "rate hike",
+   "extended their losses",
+   "premarket trade"
+  ]
+ ],
+ "vocab": [
+  {
+   "t": "stubbornly high",
+   "k": "Cụm từ",
+   "vi": "cao dai dẳng, cao mãi không giảm",
+   "note": "Trạng từ stubbornly (một cách ương bướng) nhấn mạnh chỉ số không chịu hạ dù đã có biện pháp. Hay đi với inflation, unemployment, prices; động từ đi kèm: stay/remain.",
+   "ex": "Food prices have remained stubbornly high despite a bumper harvest.",
+   "exVi": "Giá lương thực vẫn neo cao dai dẳng dù vụ mùa bội thu."
+  },
+  {
+   "t": "preferred gauge",
+   "k": "Cụm từ",
+   "vi": "thước đo được ưa dùng",
+   "note": "gauge = thước đo, chỉ báo. Báo chí gọi PCE là the Fed's preferred inflation gauge. Có thể dùng gauge cho nhiều chỉ số: a gauge of consumer confidence.",
+   "ex": "The survey is closely watched as a gauge of factory activity.",
+   "exVi": "Cuộc khảo sát được theo dõi sát như một thước đo hoạt động sản xuất."
+  },
+  {
+   "t": "from a year earlier",
+   "k": "Cụm từ",
+   "vi": "so với cùng kỳ năm trước",
+   "note": "Cách nói so sánh theo năm (year-on-year) rất phổ biến trong tin số liệu; tương tự: on the month = so với tháng trước.",
+   "ex": "Retail sales rose 5% from a year earlier.",
+   "exVi": "Doanh số bán lẻ tăng 5% so với cùng kỳ năm trước."
+  },
+  {
+   "t": "in line with forecasts",
+   "k": "Cụm từ",
+   "vi": "khớp với dự báo",
+   "note": "in line with = phù hợp, tương đương. Thêm squarely để nhấn mạnh \"khớp hoàn toàn\". Trái nghĩa: beat/miss forecasts.",
+   "ex": "Quarterly profit came in broadly in line with forecasts.",
+   "exVi": "Lợi nhuận quý nhìn chung khớp với dự báo."
+  },
+  {
+   "t": "at a … pace",
+   "k": "Cụm từ",
+   "vi": "với tốc độ …",
+   "note": "Dùng để mô tả tốc độ tăng trưởng: at a robust/sluggish/annualised pace. Đặt tính từ hoặc con số vào chỗ trống.",
+   "ex": "Exports grew at their slowest pace in two years.",
+   "exVi": "Xuất khẩu tăng với tốc độ chậm nhất trong hai năm."
+  },
+  {
+   "t": "beat expectations",
+   "k": "Cụm từ",
+   "vi": "vượt kỳ vọng, vượt dự báo",
+   "note": "beat = vượt qua; thường đi với comfortably/handily (vượt xa) hoặc narrowly (vượt sát nút). Trái nghĩa: miss expectations / fall short of expectations.",
+   "ex": "The bank's earnings comfortably beat expectations, sending its shares higher.",
+   "exVi": "Lợi nhuận của ngân hàng vượt xa kỳ vọng, đẩy cổ phiếu tăng."
+  },
+  {
+   "t": "jobless claims",
+   "k": "Cụm từ",
+   "vi": "đơn xin trợ cấp thất nghiệp",
+   "note": "Số liệu công bố hằng tuần ở Mỹ, là chỉ báo nhanh về sức khỏe thị trường lao động. Còn gọi initial claims.",
+   "ex": "A jump in jobless claims stoked fears of a slowdown.",
+   "exVi": "Số đơn xin trợ cấp thất nghiệp tăng vọt làm dấy lên lo ngại về suy giảm."
+  },
+  {
+   "t": "come in",
+   "k": "Cụm động từ",
+   "vi": "(số liệu) được công bố ở mức, ra kết quả",
+   "note": "Dùng khi nói số liệu thực tế so với dự báo: come in above/below/lower than expected, come in at 3%.",
+   "ex": "Inflation came in at 2.9%, slightly above the consensus.",
+   "exVi": "Lạm phát được công bố ở mức 2,9%, nhỉnh hơn dự báo chung."
+  },
+  {
+   "t": "bets on …",
+   "k": "Cụm từ",
+   "vi": "đặt cược vào, kỳ vọng của thị trường về …",
+   "note": "Chỉ kỳ vọng được phản ánh qua giá tài sản. Động từ đi kèm: reinforce/cement (củng cố), pare/scale back (giảm bớt) bets on.",
+   "ex": "Traders pared bets on further rate cuts after the strong jobs report.",
+   "exVi": "Giới giao dịch giảm bớt đặt cược vào việc hạ lãi suất thêm sau báo cáo việc làm khả quan."
+  },
+  {
+   "t": "rate hike",
+   "k": "Cụm từ",
+   "vi": "đợt tăng lãi suất",
+   "note": "hike = tăng (thường dùng trên báo). Trái nghĩa: rate cut. Cũng có tax hike, price hike.",
+   "ex": "The central bank delivered its third rate hike of the year.",
+   "exVi": "Ngân hàng trung ương thực hiện đợt tăng lãi suất thứ ba trong năm."
+  },
+  {
+   "t": "extend … losses",
+   "k": "Cụm từ",
+   "vi": "nới rộng đà giảm",
+   "note": "Giá/chỉ số tiếp tục giảm sâu hơn sau khi đã giảm. Trái nghĩa: extend gains; pare losses = thu hẹp đà giảm.",
+   "ex": "The yen extended its losses after the central bank held rates steady.",
+   "exVi": "Đồng yên nới rộng đà giảm sau khi ngân hàng trung ương giữ nguyên lãi suất."
+  },
+  {
+   "t": "premarket trade",
+   "k": "Cụm từ",
+   "vi": "giao dịch trước giờ mở cửa",
+   "note": "Phiên giao dịch sớm trước khi thị trường chính thức mở cửa; còn nói premarket trading.",
+   "ex": "Shares of the retailer jumped 8% in premarket trade after upbeat guidance.",
+   "exVi": "Cổ phiếu nhà bán lẻ tăng 8% trong phiên trước giờ mở cửa nhờ dự báo lạc quan."
+  }
+ ]
+}

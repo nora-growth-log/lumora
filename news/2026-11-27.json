@@ -1,0 +1,40 @@
+{
+ "date": "2026-11-27",
+ "title": "Vietnam eyes quality over quantity in trade push",
+ "src": {
+  "name": "VNA (VietnamPlus)",
+  "url": "https://en.vietnamplus.vn/vietnam-shifts-focus-towards-import-export-quality-efficiency-post356043.vnp"
+ },
+ "en": [
+  "Vietnam should pivot from simply ramping up import-export volumes to lifting the quality and efficiency of its trade, Deputy Minister of Industry and Trade Luong Hoang Thai told a workshop on the country's draft merchandise trade strategy.",
+  "Rising export turnover does not necessarily translate into stronger home-grown capacity, he warned, as the economy still leans heavily on imported raw materials, components, technology and designs.",
+  "The draft strategy for 2026-2030 targets annual export growth of 15-16% and import growth of 12-13%, with domestic businesses expected to account for 28-30% of total exports by 2030 and 38-40% by 2045.",
+  "Participants flagged weak supporting industries and thin links with the foreign-invested sector as key bottlenecks, while experts called for breakthrough measures to help firms tap capital and technology."
+ ],
+ "vi": [
+  "Việt Nam nên chuyển hướng từ việc chỉ đơn thuần gia tăng kim ngạch xuất nhập khẩu sang nâng cao chất lượng và hiệu quả thương mại, Thứ trưởng Bộ Công Thương Lương Hoàng Thái phát biểu tại hội thảo góp ý dự thảo chiến lược xuất nhập khẩu hàng hóa.",
+  "Ông cảnh báo kim ngạch xuất khẩu tăng không nhất thiết đồng nghĩa với năng lực nội tại mạnh lên, bởi nền kinh tế vẫn phụ thuộc nặng nề vào nguyên liệu, linh kiện, công nghệ và thiết kế nhập khẩu.",
+  "Dự thảo chiến lược giai đoạn 2026-2030 đặt mục tiêu xuất khẩu tăng 15-16% và nhập khẩu tăng 12-13% mỗi năm, trong đó doanh nghiệp trong nước dự kiến chiếm 28-30% tổng kim ngạch xuất khẩu vào năm 2030 và 38-40% vào năm 2045.",
+  "Các đại biểu chỉ ra công nghiệp hỗ trợ yếu và mối liên kết lỏng lẻo với khu vực có vốn đầu tư nước ngoài là những điểm nghẽn chính, trong khi các chuyên gia kêu gọi có giải pháp đột phá để giúp doanh nghiệp tiếp cận vốn và công nghệ."
+ ],
+ "k": [
+  ["pivot from", "ramping up", "import-export volumes", "quality and efficiency", "draft"],
+  ["export turnover", "translate into", "home-grown capacity", "leans heavily on"],
+  ["targets", "annual export growth", "account for", "domestic businesses"],
+  ["flagged", "supporting industries", "foreign-invested sector", "bottlenecks", "breakthrough measures", "tap capital"]
+ ],
+ "vocab": [
+  {"t": "pivot from … to …", "k": "Cụm động từ", "vi": "chuyển hướng từ … sang …", "note": "Diễn tả việc thay đổi chiến lược, trọng tâm một cách có chủ đích; rất hay gặp khi nói về chính sách hay mô hình kinh doanh.", "ex": "The carmaker is pivoting from petrol engines to electric vehicles.", "exVi": "Hãng xe đang chuyển hướng từ động cơ xăng sang xe điện."},
+  {"t": "ramp up", "k": "Cụm động từ", "vi": "đẩy mạnh, tăng mạnh", "note": "Dùng cho sản lượng, đầu tư, chi tiêu… tăng nhanh về quy mô; sau giới từ thì dùng dạng ramping up.", "ex": "Chipmakers are ramping up production to meet soaring demand.", "exVi": "Các hãng chip đang đẩy mạnh sản xuất để đáp ứng nhu cầu tăng vọt."},
+  {"t": "export turnover", "k": "Cụm từ", "vi": "kim ngạch xuất khẩu", "note": "Tổng giá trị hàng xuất khẩu trong một kỳ; báo chí Việt Nam bản tiếng Anh dùng rất phổ biến.", "ex": "Seafood export turnover reached US$9 billion last year.", "exVi": "Kim ngạch xuất khẩu thủy sản đạt 9 tỷ USD năm ngoái."},
+  {"t": "translate into", "k": "Cụm động từ", "vi": "chuyển hóa thành, dẫn đến", "note": "Dùng khi một kết quả (tăng trưởng, đầu tư) có/không mang lại kết quả cụ thể khác; hay đi với 'not necessarily'.", "ex": "Higher profits have yet to translate into bigger wages for workers.", "exVi": "Lợi nhuận cao hơn vẫn chưa chuyển hóa thành mức lương cao hơn cho người lao động."},
+  {"t": "home-grown", "k": "Từ", "vi": "nội địa, tự phát triển trong nước", "note": "Tính từ chỉ thứ do trong nước tự xây dựng (doanh nghiệp, công nghệ, năng lực), trái với nhập khẩu hay từ nước ngoài.", "ex": "The government wants to nurture home-grown tech champions.", "exVi": "Chính phủ muốn nuôi dưỡng các doanh nghiệp công nghệ đầu tàu trong nước."},
+  {"t": "lean heavily on", "k": "Cụm động từ", "vi": "phụ thuộc nặng nề vào", "note": "Nghĩa tương đương 'rely heavily on', mang sắc thái báo chí; chia động từ theo chủ ngữ (leans, leaned…).", "ex": "The economy leans heavily on tourism for foreign currency.", "exVi": "Nền kinh tế phụ thuộc nặng nề vào du lịch để có ngoại tệ."},
+  {"t": "account for", "k": "Cụm động từ", "vi": "chiếm (tỷ trọng)", "note": "Dùng với phần trăm hoặc tỷ lệ: X accounts for 30% of Y.", "ex": "Electronics account for about a third of the country's exports.", "exVi": "Hàng điện tử chiếm khoảng một phần ba kim ngạch xuất khẩu của cả nước."},
+  {"t": "flag", "k": "Từ", "vi": "nêu ra, cảnh báo (vấn đề)", "note": "Động từ, nghĩa là chỉ ra một rủi ro hay vấn đề cần chú ý; ngắn gọn hơn 'point out' nên báo chí rất chuộng.", "ex": "Analysts flagged rising debt as a risk to the recovery.", "exVi": "Các nhà phân tích chỉ ra nợ gia tăng là rủi ro đối với đà phục hồi."},
+  {"t": "bottleneck", "k": "Từ", "vi": "điểm nghẽn, nút thắt", "note": "Chỉ khâu yếu kìm hãm cả hệ thống, như hạ tầng, thể chế, nguồn cung.", "ex": "Power shortages remain a major bottleneck for manufacturers.", "exVi": "Thiếu điện vẫn là điểm nghẽn lớn đối với các nhà sản xuất."},
+  {"t": "breakthrough measures", "k": "Cụm từ", "vi": "giải pháp đột phá", "note": "Thường đi với 'call for', 'adopt', 'roll out'; tương ứng cụm 'giải pháp đột phá' trong văn bản chính sách Việt Nam.", "ex": "Business leaders called for breakthrough measures to unlock stalled projects.", "exVi": "Lãnh đạo doanh nghiệp kêu gọi có giải pháp đột phá để khơi thông các dự án bị đình trệ."},
+  {"t": "foreign-invested sector", "k": "Cụm từ", "vi": "khu vực có vốn đầu tư nước ngoài (FDI)", "note": "Cách gọi chuẩn khu vực doanh nghiệp FDI; đối lập với 'domestic businesses'.", "ex": "The foreign-invested sector generates over 70% of Vietnam's exports.", "exVi": "Khu vực có vốn đầu tư nước ngoài tạo ra hơn 70% kim ngạch xuất khẩu của Việt Nam."},
+  {"t": "tap", "k": "Từ", "vi": "tiếp cận, khai thác (nguồn lực)", "note": "Động từ, dùng với capital, market, funding… nghĩa là tận dụng hoặc tiếp cận một nguồn lực.", "ex": "Small firms struggle to tap bank loans without collateral.", "exVi": "Doanh nghiệp nhỏ khó tiếp cận vốn vay ngân hàng nếu không có tài sản thế chấp."}
+ ]
+}

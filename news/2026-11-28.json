@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-28",
+ "title": "Chip rebound lifts Wall Street to a winning week",
+ "src": {
+  "name": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-firday-november-27-dow-sp-500-nasdaq-black-friday-holiday-091152065.html"
+ },
+ "en": [
+  "Wall Street closed out a choppy holiday week on a high note on Friday, with the Dow Jones Industrial Average jumping nearly 600 points, or 1.2%, in a shortened post-Thanksgiving session.",
+  "The S&P 500 climbed 1.6% and the tech-heavy Nasdaq Composite surged 2.3% as jitters over whether artificial intelligence spending will pay off subsided and the recent tech sell-off took a breather.",
+  "Chipmakers led the charge, with Micron soaring more than 7% and the Philadelphia Semiconductor Index gaining almost 5%, though the gauge still ended the week in the red.",
+  "For the week, the Dow notched a 3.4% gain, outpacing both the S&P 500 and the Nasdaq, even as the 10-year Treasury yield edged up toward 4.9% and oil prices firmed ahead of Sunday's OPEC meeting."
+ ],
+ "vi": [
+  "Phố Wall khép lại một tuần lễ nghỉ lễ đầy biến động bằng một phiên khởi sắc vào thứ Sáu, khi chỉ số Dow Jones tăng gần 600 điểm, tương đương 1,2%, trong phiên giao dịch rút ngắn sau Lễ Tạ ơn.",
+  "S&P 500 tăng 1,6% và chỉ số Nasdaq Composite, vốn nặng về cổ phiếu công nghệ, vọt 2,3% khi nỗi lo về việc chi tiêu cho trí tuệ nhân tạo có mang lại hiệu quả hay không lắng xuống và đợt bán tháo cổ phiếu công nghệ gần đây tạm ngưng.",
+  "Các hãng chip dẫn dắt đà tăng, trong đó Micron tăng vọt hơn 7% và chỉ số bán dẫn Philadelphia tăng gần 5%, dù chỉ số này vẫn khép lại tuần trong sắc đỏ.",
+  "Tính cả tuần, Dow Jones tăng 3,4%, vượt cả S&P 500 lẫn Nasdaq, ngay cả khi lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm nhích lên gần 4,9% và giá dầu đi lên trước cuộc họp OPEC vào Chủ nhật."
+ ],
+ "k": [
+  [
+   "closed out",
+   "choppy",
+   "on a high note",
+   "shortened"
+  ],
+  [
+   "tech-heavy",
+   "surged",
+   "jitters",
+   "pay off",
+   "sell-off",
+   "took a breather"
+  ],
+  [
+   "led the charge",
+   "soaring",
+   "gauge",
+   "in the red"
+  ],
+  [
+   "notched",
+   "outpacing",
+   "edged up",
+   "firmed ahead of"
+  ]
+ ],
+ "vocab": [
+  {
+   "t": "close out",
+   "k": "Cụm động từ",
+   "vi": "khép lại, kết thúc (một giai đoạn)",
+   "note": "Dùng cho tuần, tháng, năm giao dịch hoặc một vị thế đầu tư; hay đi với 'on a high/low note'.",
+   "ex": "Asian markets closed out the quarter with modest gains.",
+   "exVi": "Các thị trường châu Á khép lại quý với mức tăng nhẹ."
+  },
+  {
+   "t": "on a high note",
+   "k": "Thành ngữ",
+   "vi": "kết thúc tốt đẹp, khởi sắc",
+   "note": "Chỉ việc kết thúc một giai đoạn bằng kết quả tích cực; ngược lại là 'on a sour/low note'.",
+   "ex": "The retailer ended the year on a high note thanks to strong holiday sales.",
+   "exVi": "Nhà bán lẻ kết thúc năm một cách khởi sắc nhờ doanh số mùa lễ mạnh."
+  },
+  {
+   "t": "choppy",
+   "k": "Từ",
+   "vi": "biến động thất thường, lên xuống liên tục",
+   "note": "Tính từ mô tả thị trường dao động qua lại mà không có xu hướng rõ ràng.",
+   "ex": "Trading was choppy as investors awaited the central bank's decision.",
+   "exVi": "Giao dịch biến động thất thường khi nhà đầu tư chờ quyết định của ngân hàng trung ương."
+  },
+  {
+   "t": "tech-heavy",
+   "k": "Từ",
+   "vi": "nặng về (tỷ trọng) cổ phiếu công nghệ",
+   "note": "Tính từ ghép gần như luôn đi kèm Nasdaq; mẫu '…-heavy' dùng cho thứ có tỷ trọng lớn một loại nào đó.",
+   "ex": "The tech-heavy index has doubled over the past three years.",
+   "exVi": "Chỉ số nặng về công nghệ này đã tăng gấp đôi trong ba năm qua."
+  },
+  {
+   "t": "pay off",
+   "k": "Cụm động từ",
+   "vi": "mang lại kết quả, sinh lời",
+   "note": "Nói về một khoản đầu tư, chiến lược hay nỗ lực cuối cùng có hiệu quả; không cần tân ngữ.",
+   "ex": "The company's bet on electric trucks has started to pay off.",
+   "exVi": "Canh bạc xe tải điện của công ty đã bắt đầu sinh lời."
+  },
+  {
+   "t": "take a breather",
+   "k": "Thành ngữ",
+   "vi": "tạm nghỉ, tạm ngưng (sau một đợt tăng/giảm mạnh)",
+   "note": "Nghĩa đen là nghỉ lấy hơi; báo tài chính dùng khi một xu hướng tạm dừng.",
+   "ex": "After a five-day rally, gold prices took a breather on Tuesday.",
+   "exVi": "Sau năm phiên tăng liên tiếp, giá vàng tạm chững lại vào thứ Ba."
+  },
+  {
+   "t": "lead the charge",
+   "k": "Thành ngữ",
+   "vi": "dẫn đầu, dẫn dắt đà tăng",
+   "note": "Nhóm ngành hay cổ phiếu đóng vai trò đầu tàu kéo thị trường; chia động từ theo thì (led).",
+   "ex": "Bank shares led the charge after better-than-expected earnings.",
+   "exVi": "Cổ phiếu ngân hàng dẫn dắt đà tăng sau kết quả kinh doanh tốt hơn dự kiến."
+  },
+  {
+   "t": "in the red",
+   "k": "Thành ngữ",
+   "vi": "giảm điểm, thua lỗ (sắc đỏ)",
+   "note": "Chỉ giá giảm hoặc doanh nghiệp lỗ; ngược lại là 'in the black' (có lãi). Lưu ý ở Mỹ màu đỏ là giảm.",
+   "ex": "Most European bourses finished the session in the red.",
+   "exVi": "Hầu hết các sàn châu Âu kết thúc phiên trong sắc đỏ."
+  },
+  {
+   "t": "notch",
+   "k": "Từ",
+   "vi": "ghi được, đạt được",
+   "note": "Động từ (notch up) dùng cho mức tăng, chiến thắng, kỷ lục; sắc thái báo chí hơn 'record' hay 'achieve'.",
+   "ex": "The carmaker notched record sales in October.",
+   "exVi": "Hãng xe đạt doanh số kỷ lục trong tháng 10."
+  },
+  {
+   "t": "outpace",
+   "k": "Từ",
+   "vi": "vượt, tăng nhanh hơn",
+   "note": "Động từ so sánh tốc độ tăng của hai đối tượng: X outpaces Y.",
+   "ex": "Wage growth has outpaced inflation for the first time in two years.",
+   "exVi": "Tăng trưởng tiền lương lần đầu vượt lạm phát sau hai năm."
+  },
+  {
+   "t": "edge up",
+   "k": "Cụm động từ",
+   "vi": "nhích lên",
+   "note": "Tăng nhẹ, từ từ; trái nghĩa là 'edge down/lower'. Hay dùng với lợi suất, lãi suất, tỷ giá.",
+   "ex": "The unemployment rate edged up to 4.3% last month.",
+   "exVi": "Tỷ lệ thất nghiệp nhích lên 4,3% trong tháng trước."
+  },
+  {
+   "t": "firm",
+   "k": "Từ",
+   "vi": "đi lên, vững giá",
+   "note": "Động từ chỉ giá cả hàng hóa, tiền tệ tăng nhẹ hoặc giữ vững; hay đi với 'ahead of' để chỉ trước một sự kiện.",
+   "ex": "The dollar firmed ahead of the jobs report.",
+   "exVi": "Đồng USD đi lên trước báo cáo việc làm."
+  }
+ ]
+}
